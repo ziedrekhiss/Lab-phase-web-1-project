@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAB PHASE</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.HTML"><h1>Travels<span>GO</span></h1></a>
+            <ul>
+                <li>
+                    <button data-bs-toggle="modal" data-bs-target="#exampleModal"><p>FR/TND</p></button>
+                <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h2 class="modal-title fs-5" id="exampleModalLabel">Update your settings</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                        <div class="Languages">
+                            <div class="label">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                                    <path d="M0 128C0 92.7 28.7 64 64 64H256h48 16H576c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H320 304 256 64c-35.3 0-64-28.7-64-64V128zm320 0V384H576V128H320zM178.3 175.9c-3.2-7.2-10.4-11.9-18.3-11.9s-15.1 4.7-18.3 11.9l-64 144c-4.5 10.1 .1 21.9 10.2 26.4s21.9-.1 26.4-10.2l8.9-20.1h73.6l8.9 20.1c4.5 10.1 16.3 14.6 26.4 10.2s14.6-16.3 10.2-26.4l-64-144zM160 233.2L179 276H141l19-42.8zM448 164c11 0 20 9 20 20v4h44 16c11 0 20 9 20 20s-9 20-20 20h-2l-1.6 4.5c-8.9 24.4-22.4 46.6-39.6 65.4c.9 .6 1.8 1.1 2.7 1.6l18.9 11.3c9.5 5.7 12.5 18 6.9 27.4s-18 12.5-27.4 6.9l-18.9-11.3c-4.5-2.7-8.8-5.5-13.1-8.5c-10.6 7.5-21.9 14-34 19.4l-3.6 1.6c-10.1 4.5-21.9-.1-26.4-10.2s.1-21.9 10.2-26.4l3.6-1.6c6.4-2.9 12.6-6.1 18.5-9.8l-12.2-12.2c-7.8-7.8-7.8-20.5 0-28.3s20.5-7.8 28.3 0l14.6 14.6 .5 .5c12.4-13.1 22.5-28.3 29.8-45H448 376c-11 0-20-9-20-20s9-20 20-20h52v-4c0-11 9-20 20-20z"/>
+                                </svg>
+                                <h3>Language</h3>
+                            </div>
+                            <select id="lang">
+                                <option value="FR">FR</option>
+                                <option value="EN">EN</option>
+                            </select>
+                        </div>
+                        <div class="currency">
+                            <div class="label">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                    <path d="M512 80c0 18-14.3 34.6-38.4 48c-29.1 16.1-72.5 27.5-122.3 30.9c-3.7-1.8-7.4-3.5-11.3-5C300.6 137.4 248.2 128 192 128c-8.3 0-16.4 .2-24.5 .6l-1.1-.6C142.3 114.6 128 98 128 80c0-44.2 86-80 192-80S512 35.8 512 80zM160.7 161.1c10.2-.7 20.7-1.1 31.3-1.1c62.2 0 117.4 12.3 152.5 31.4C369.3 204.9 384 221.7 384 240c0 4-.7 7.9-2.1 11.7c-4.6 13.2-17 25.3-35 35.5c0 0 0 0 0 0c-.1 .1-.3 .1-.4 .2l0 0 0 0c-.3 .2-.6 .3-.9 .5c-35 19.4-90.8 32-153.6 32c-59.6 0-112.9-11.3-148.2-29.1c-1.9-.9-3.7-1.9-5.5-2.9C14.3 274.6 0 258 0 240c0-34.8 53.4-64.5 128-75.4c10.5-1.5 21.4-2.7 32.7-3.5zM416 240c0-21.9-10.6-39.9-24.1-53.4c28.3-4.4 54.2-11.4 76.2-20.5c16.3-6.8 31.5-15.2 43.9-25.5V176c0 19.3-16.5 37.1-43.8 50.9c-14.6 7.4-32.4 13.7-52.4 18.5c.1-1.8 .2-3.5 .2-5.3zm-32 96c0 18-14.3 34.6-38.4 48c-1.8 1-3.6 1.9-5.5 2.9C304.9 404.7 251.6 416 192 416c-62.8 0-118.6-12.6-153.6-32C14.3 370.6 0 354 0 336V300.6c12.5 10.3 27.6 18.7 43.9 25.5C83.4 342.6 135.8 352 192 352s108.6-9.4 148.1-25.9c7.8-3.2 15.3-6.9 22.4-10.9c6.1-3.4 11.8-7.2 17.2-11.2c1.5-1.1 2.9-2.3 4.3-3.4V304v5.7V336zm32 0V304 278.1c19-4.2 36.5-9.5 52.1-16c16.3-6.8 31.5-15.2 43.9-25.5V272c0 10.5-5 21-14.9 30.9c-16.3 16.3-45 29.7-81.3 38.4c.1-1.7 .2-3.5 .2-5.3zM192 448c56.2 0 108.6-9.4 148.1-25.9c16.3-6.8 31.5-15.2 43.9-25.5V432c0 44.2-86 80-192 80S0 476.2 0 432V396.6c12.5 10.3 27.6 18.7 43.9 25.5C83.4 438.6 135.8 448 192 448z"/>
+                                </svg>
+                                <h3>Currency</h3>
+                            </div>
+                            <select>
+                                <option value="TND">TND</option>
+                                <option value="$ USD">$ USD</option>
+                                <option value="€ EU">€ EU</option>
+                            </select>
+                        </div>
+                        </div>
+                        <div class="modal-footer">
+                        <button>SET</button>
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+                </li>
+                <li><a href="#contactUs"><p>Contact Us</p></a></li>
+                <li class="signIn">
+                    <button data-bs-toggle="modal" data-bs-target="#signinmodal"><p>Sign In</p></button>
+                    <!-- modal login-->
+                    <div class="modal fade" id="signinmodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                            <h2 class="modal-title fs-5" id="exampleModalLabel">Sign In to Travels <span>GO</span></h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                            <form onsubmit="return validateLogin ()" >
+                                <div class="formLogin">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                        <path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/>
+                                    </svg>
+                                    <input type="text" id="login" name="Email" placeholder="Type your Email here" />
+                                    <i class="fa-solid fa-times u_times"></i>
+                                    <i class="fa-solid fa-check u_check"></i>
+                                    <p class="u_error" id="error">Please enter a valid Email!</p>
+                                </div>
+                                <div class="formLogin">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                    <path d="M144 144v48H304V144c0-44.2-35.8-80-80-80s-80 35.8-80 80zM80 192V144C80 64.5 144.5 0 224 0s144 64.5 144 144v48h16c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V256c0-35.3 28.7-64 64-64H80z"/></svg>
+                                    <input type="password" id="password" name="password" placeholder="password" />
+                                    <i class="fa-solid fa-times p_times"></i>
+                                    <i class="fa-solid fa-check p_check"></i>
+                                    <p class="p_error" id="error">Please enter a valid Email!</p>
+                                </div>
+                                <div class="loginBtn">
+                                    <input id="log-in" type="submit" value="Log-In" />
+                                    <input  type="submit" value="Forgot your password?" />
+                                </div>
+                            </form>
+                            </div>
+                            <div class="modal-footer">
+                            <h3>Don't have an account? <button>Sign up and get started!</button></h3>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="carrousel">
+            <div class="slider_container">
+                <div class="image_container">
+                    <img id="panoramic" src="asset/amsterdamx.jpg" alt="amsterdam">
+                    <img id="panoramic" src="asset/parc-guell-barcelonex.jpg" alt="barcelone">
+                    <img id="panoramic" src="asset/paris.jpg" alt="paris">
+                </div>
+                <div class="searchContainer">
+                    <h1>Discover the World</h1>
+                    <div class="search-grid">
+                        <input type="text" name="search" placeholder="Search destination & experience"/>
+                        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                </div>
+                <i class="fa-solid fa-angles-left btn prev"></i>
+                <i class="fa-solid fa-angles-right btn next"></i>
+            </div>
+        </div>
+        <div class="best-places">
+            <h1>Best destinations worldwide</h1>
+            <div class="destinations">
+                <ul class="nav nav-tabs" id="navTab">
+                    <li>
+                        <a class="nav-link active" aria-current="page" href="#barc" id="barc"><img src="asset/destinations/Barcelona.jpg" alt="barcelona">Barcelona</a>
+                    </li>
+                    <li>
+                        <a class="nav-link active" aria-current="page" href="#andorra" id="andorra"><img src="asset/destinations/andorra.jpg" alt="Andorre">Andorre</a>
+                    </li>
+                    <li>
+                        <a class="nav-link active" aria-current="page" href="#par" id="par"><img src="asset/destinations/paris.jpg" alt="Paris">Paris</a>
+                    </li>
+                    <li>
+                        <a class="nav-link active" aria-current="page" href="#ams" id="ams"><img src="asset/destinations/amsterdam.jpg" alt="amsterdam">Amsterdam</a>
+                    </li>
+                </ul>
+            </div> 
+            <div class="placesToVisit">
+                <i class="fa-solid fa-angles-left btn prevMenu"></i>
+                <i class="fa-solid fa-angles-right btn nextMenu"></i>
+                <div class="content_slider">
+                    <div id="placesToVisitBarcelona">
+                        <div class="placesToVisitContainer">
+                                <img src="asset/barcelona/parcguel/1.jpg" alt="place1">
+                                <span>Barcelona</span>
+                                <h3>Parc Güell</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, explicabo possimus nesciunt aspernatur laboriosam repudiandae?</p>
+                                <div class="ratePrice">
+                                    <div class="rate">
+                                        <span class="fa fa-star checked" style="color:orange;" ></span>
+                                        <p>4.5</p>
+                                    </div>
+                                        <p id="price">€15.50</p>
+                                </div>
+                        </div>
+                        <div class="placesToVisitContainer">
+                                <img src="asset/barcelona/sagradafamilia/1.jpg" alt="place1">
+                                <span>Barcelona</span>
+                                <h3>La Sagrada Familia</h3>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae molestias itaque alias.</p>
+                                <div class="ratePrice">
+                                    <div class="rate">
+                                        <span class="fa fa-star checked" style="color:orange;" ></span>
+                                        <p>4.5</p>
+                                    </div>
+                                        <p id="price">€28.50</p>
+                                </div>
+                        </div>
+                        <div class="placesToVisitContainer">
+                            <img src="asset/barcelona/barceloneta/1.jpg" alt="place1">
+                            <span>Barcelona</span>
+                            <h3>Barceloneta</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quisquam delectus tempora?</p>
+                            <div class="ratePrice">
+                                <div class="rate">
+                                    <span class="fa fa-star checked" style="color:orange;" ></span>
+                                    <p>4.5</p>
+                                </div>
+                                    <p id="price">€28.50</p>
+                            </div>
+                        </div>
+                        <div class="placesToVisitContainer">
+                            <img src="asset/barcelona/la rambla/1.jpg" alt="place1">
+                            <span>Barcelona</span>
+                            <h3>La Rambla</h3>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime vel soluta aliquam odio.</p>
+                            <div class="ratePrice">
+                                <div class="rate">
+                                    <span class="fa fa-star checked" style="color:orange;" ></span>
+                                    <p>4.5</p>
+                                </div>
+                                    <p id="price">€15.50</p>
+                            </div>
+                        </div>
+                        <div class="placesToVisitContainer">
+                            <img src="asset/barcelona/picasso_museum/1.jpg" alt="place1">
+                            <span>Barcelona</span>
+                            <h3>Picasso Museum Barcelona</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas molestiae tempora aut amet dignissimos.</p>
+                            <div class="ratePrice">
+                                <div class="rate">
+                                    <span class="fa fa-star checked" style="color:orange;" ></span>
+                                    <p>4.5</p>
+                                </div>
+                                    <p id="price">€15.50</p>
+                            </div>
+                        </div>
+                        <div class="placesToVisitContainer">
+                            <img src="asset/barcelona/botanicalgarden/1.jpg" alt="place1">
+                            <span>Barcelona</span>
+                            <h3>Botanical garden Barcelona</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas molestiae tempora aut amet dignissimos.</p>
+                            <div class="ratePrice">
+                                <div class="rate">
+                                    <span class="fa fa-star checked" style="color:orange;" ></span>
+                                    <p>4.5</p>
+                                </div>
+                                    <p id="price">€15.50</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="placesToVisitAndorra">
+                        <div class="placesToVisitContainer">
+                                <img src="asset/andorra/Plaça del Poble.jpg" alt="place1">
+                                <span>Andorre</span>
+                                <h3>Plaça del Poble</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, ullam consectetur!</p>
+                                <div class="ratePrice">
+                                    <div class="rate">
+                                        <span class="fa fa-star checked" style="color:orange;" ></span>
+                                        <p>4.2</p>
+                                    </div>
+                                        from
+                                        <p id="price">€-</p>
+                                </div>
+                        </div>
+                        <div class="placesToVisitContainer">
+                            <img src="asset/andorra/Caldea Spa Complex.jpg" alt="place1">
+                            <span>Andorre</span>
+                            <h3>Caldea Spa Complex</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, explicabo possimus nesciunt aspernatur laboriosam repudiandae?</p>
+                            <div class="ratePrice">
+                                <div class="rate">
+                                    <span class="fa fa-star checked" style="color:orange;" ></span>
+                                    <p>4.8</p>
+                                </div>
+                                    from
+                                    <p id="price">€18.99</p>
+                            </div>
+                        </div>
+                        <div class="placesToVisitContainer">
+                                <img src="asset/andorra/Naturlandia.jpg" alt="place1">
+                                <span>Andorre</span>
+                                <h3>Naturlandia</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, explicabo possimus nesciunt aspernatur laboriosam repudiandae?</p>
+                                <div class="ratePrice">
+                                    <div class="rate">
+                                        <span class="fa fa-star checked" style="color:orange;" ></span>
+                                        <p>4.5</p>
+                                    </div>
+                                        from
+                                        <p id="price">€15.50</p>
+                                </div>
+                        </div>
+                        <div class="placesToVisitContainer">
+                            <img src="asset/andorra/Museu del Tabac.jpg" alt="place1">
+                            <span>Andorre</span>
+                            <h3>Museu del Tabac</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, explicabo possimus nesciunt aspernatur laboriosam repudiandae?</p>
+                            <div class="ratePrice">
+                                <div class="rate">
+                                    <span class="fa fa-star checked" style="color:orange;" ></span>
+                                    <p>4.6</p>
+                                </div>
+                                    from
+                                    <p id="price">€12.50</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="placesToVisitParis">
+                        <div class="placesToVisitContainer">
+                                <img src="asset/paris/eiffel.jpg" alt="place1">
+                                <span>Paris</span>
+                                <h3>Tour Eiffel</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, explicabo possimus nesciunt aspernatur laboriosam repudiandae?</p>
+                                <div class="ratePrice">
+                                    <div class="rate">
+                                        <span class="fa fa-star checked" style="color:orange;" ></span>
+                                        <p>4.8</p>
+                                    </div>
+                                        from
+                                        <p id="price">€17.10</p>
+                                </div>
+                        </div>
+                        <div class="placesToVisitContainer">
+                                <img src="asset/paris/arc de triomphe.jpg" alt="place1">
+                                <span>Paris</span>
+                                <h3>Arc de Triomphe</h3>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt ducimus possimus adipisci assumenda aut hic.</p>
+                                <div class="ratePrice">
+                                    <div class="rate">
+                                        <span class="fa fa-star checked" style="color:orange;" ></span>
+                                        <p>4.1</p>
+                                    </div>
+                                    from
+                                        <p id="price">€13.00</p>
+                                </div>
+                        </div>
+                        <div class="placesToVisitContainer">
+                            <img src="asset/paris/louvre.jpg" alt="place1">
+                            <span>Paris</span>
+                            <h3>Louvre museum</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quisquam delectus tempora?</p>
+                            <div class="ratePrice">
+                                <div class="rate">
+                                    <span class="fa fa-star checked" style="color:orange;" ></span>
+                                    <p>4.5</p>
+                                </div>
+                                    <p id="price">€17.00</p>
+                            </div>
+                        </div>
+                        <div class="placesToVisitContainer">
+                            <img src="asset/paris/lafayette.jpg" alt="place1">
+                            <span>Paris</span>
+                            <h3>Galeries Lafayette</h3>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime vel soluta aliquam odio.</p>
+                            <div class="ratePrice">
+                                <div class="rate">
+                                    <span class="fa fa-star checked" style="color:orange;" ></span>
+                                    <p>4.6</p>
+                                </div>
+                                    <p id="price">€ -</p>
+                            </div>
+                        </div>
+                        <div class="placesToVisitContainer">
+                            <img src="asset/paris/notredame.jpg" alt="place1">
+                            <span>Paris</span>
+                            <h3>Cathédrale Notre-Dame de Paris</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas molestiae tempora aut amet dignissimos.</p>
+                            <div class="ratePrice">
+                                <div class="rate">
+                                    <span class="fa fa-star checked" style="color:orange;" ></span>
+                                    <p>4.5</p>
+                                </div>
+                                from
+                                    <p id="price">€8.00</p>
+                            </div>
+                        </div>
+                        <div class="placesToVisitContainer">
+                            <img src="asset/paris/versaille.jpg" alt="place1">
+                            <span>Paris</span>
+                            <h3>Versaille castle</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia eum repellendus distinctio sapiente libero?</p>
+                            <div class="ratePrice">
+                                <div class="rate">
+                                    <span class="fa fa-star checked" style="color:orange;" ></span>
+                                    <p>4.8</p>
+                                </div>
+                                from
+                                    <p id="price">€10.00</p>
+                            </div>
+                        </div>
+                        <div class="placesToVisitContainer">
+                            <img src="asset/paris/disneyland.jpg" alt="place1">
+                            <span>Paris</span>
+                            <h3>Disneyland Paris</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia eum repellendus distinctio sapiente libero?</p>
+                            <div class="ratePrice">
+                                <div class="rate">
+                                    <span class="fa fa-star checked" style="color:orange;" ></span>
+                                    <p>4.8</p>
+                                </div>
+                                from
+                                    <p id="price">€52.00</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div id="placesToVisitAmsterdam">
+                        <div class="placesToVisitContainer">
+                                <img src="asset/Amsterdam/Rijksmuseum.jpg" alt="place1">
+                                <span>Amsterdam</span>
+                                <h3>Rijksmuseum Museum</h3>
+                                <p>Lorem ipsum dolor sit amet si ipsam perferendis corrupti omnis sequi. Excepturi iste mollitia optio?</p>
+                                <div class="ratePrice">
+                                    <div class="rate">
+                                        <span class="fa fa-star checked" style="color:orange;" ></span>
+                                        <p>4.3</p>
+                                    </div>
+                                        up to
+                                        <p id="price">€ 20.00</p>
+                                </div>
+                        </div>
+                        <div class="placesToVisitContainer">
+                                <img src="asset/Amsterdam/jardins botaniques.jpg" alt="place1">
+                                <span>Amsterdam</span>
+                                <h3>botanical gardens Amsterdam</h3>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt ducimus possimus adipisci assumenda aut hic.</p>
+                                <div class="ratePrice">
+                                    <div class="rate">
+                                        <span class="fa fa-star checked" style="color:orange;" ></span>
+                                        <p>4.1</p>
+                                    </div>
+                                    from
+                                        <p id="price">€6.50</p>
+                                </div>
+                        </div>
+                        <div class="placesToVisitContainer">
+                            <img src="asset/Amsterdam/redlight secrets museum.jpg" alt="place1">
+                            <span>Amsterdam</span>
+                            <h3>Red Light Secrets Museum</h3>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam, saepe!</p>
+                            <div class="ratePrice">
+                                <div class="rate">
+                                    <span class="fa fa-star checked" style="color:orange;" ></span>
+                                    <p>4.5</p>
+                                </div>
+                                    From
+                                    <p id="price">€13.00</p>
+                            </div>
+                        </div>
+                        <div class="placesToVisitContainer">
+                            <img src="asset/Amsterdam/GOOYER mill.jpg" alt="place1">
+                            <span>Amsterdam</span>
+                            <h3>GOOYER Mill</h3>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime vel soluta aliquam odio.</p>
+                            <div class="ratePrice">
+                                <div class="rate">
+                                    <span class="fa fa-star checked" style="color:orange;" ></span>
+                                    <p>4.6</p>
+                                </div>
+                                    <p id="price">€ -</p>
+                            </div>
+                        </div>
+                        <div class="placesToVisitContainer">
+                            <img src="asset/Amsterdam/heineken experience.jpg" alt="place1">
+                            <span>Amsterdam</span>
+                            <h3>HEINEKEN Experience</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas molestiae tempora aut amet dignissimos.</p>
+                            <div class="ratePrice">
+                                <div class="rate">
+                                    <span class="fa fa-star checked" style="color:orange;" ></span>
+                                    <p>4.8</p>
+                                </div>
+                                from
+                                    <p id="price">€18.00</p>
+                            </div>
+                        </div>
+                        <div class="placesToVisitContainer">
+                            <img src="asset/Amsterdam/Bloemenmarkt.jpg" alt="place1">
+                            <span>Amsterdam</span>
+                            <h3>Bloemenmarkt</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nam eveniet possimus.</p>
+                            <div class="ratePrice">
+                                <div class="rate">
+                                    <span class="fa fa-star checked" style="color:orange;" ></span>
+                                    <p>4.3</p>
+                                </div>
+                                    <p id="price">€ -</p>
+                            </div>
+                        </div>
+                        <div class="placesToVisitContainer">
+                            <img src="asset/Amsterdam/vangogh.jpg" alt="place1">
+                            <span>Amsterdam</span>
+                            <h3>van Gogh Museum</h3>
+                            <p>Lorem ipsum dolor sit. Quia eum repellendus distinctio sapiente libero?</p>
+                            <div class="ratePrice">
+                                <div class="rate">
+                                    <span class="fa fa-star checked" style="color:orange;" ></span>
+                                    <p>4.8</p>
+                                </div>
+                                from
+                                    <p id="price">€23.50</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="exploreDestinations">
+            <div class="destinations">
+                <ul class="nav nav-tabs" id="explore">
+                    <li>
+                        <a class="nav-link active" aria-current="page" href="#explore" id="exploreBarcelona"><img src="asset/destinations/Barcelona.jpg" alt="barcelona">Explore Barcelona</a>
+                    </li>
+                    <li>
+                        <a class="nav-link active" aria-current="page" href="#explore" id="exploreAndorra"><img src="asset/destinations/andorra.jpg" alt="Andorre">Explore Andorre</a>
+                    </li>
+                    <li>
+                        <a class="nav-link active" aria-current="page" href="#explore" id="exploreParis"><img src="asset/destinations/paris.jpg" alt="Paris">Explore Paris</a>
+                    </li>
+                    <li>
+                        <a class="nav-link active" aria-current="page" href="#explore" id="exploreAmsterdam" ><img src="asset/destinations/amsterdam.jpg" alt="amsterdam">Explore Amsterdam</a>
+                    </li>
+                </ul>
+                <div class="barcelonaGallery" id="barcelonaSection">
+                    <div class="countryPresentation">
+                        <img class="country" src="asset/barcelona/parc-guell-barcelonex.jpg" alt="barcelone">
+                        <div class="countryText">
+                            <h1>Barcelona</h1>
+                            <p>Catalan capital known for the whimsical architecture of Gaudí, its Gothic quarter and its tapas bars.</p>
+                        </div>
+                    </div>
+                    <div class="countryGrid">
+                            <a href="#parcGuellGallery" onclick="displayGallery('#parcGuellGallery')"><div class="placesToVisitContainer">
+                                <img src="asset/barcelona/parcguel/1.jpg" alt="place1">
+                                <span>Barcelona</span>
+                                <h3>Parc Güell</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, explicabo possimus nesciunt aspernatur laboriosam repudiandae?</p>
+                                <div class="ratePrice">
+                                    <div class="rate">
+                                        <span class="fa fa-star checked" style="color:orange;" ></span>
+                                        <p>4.5</p>
+                                    </div>
+                                        <p id="price">€15.50</p>
+                                </div>
+                            </div></a>
+                            <a href="#sagradaFamiliaGallery" onclick="displayGallery('#sagradaFamiliaGallery')"><div class="placesToVisitContainer">
+                                <img src="asset/barcelona/sagradafamilia/1.jpg" alt="place1">
+                                <span>Barcelona</span>
+                                <h3>La Sagrada Familia</h3>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae molestias itaque alias.</p>
+                                <div class="ratePrice">
+                                    <div class="rate">
+                                        <span class="fa fa-star checked" style="color:orange;" ></span>
+                                        <p>4.5</p>
+                                    </div>
+                                        <p id="price">€28.50</p>
+                                </div>
+                            </div></a>
+                            <a href="#barcelonetaGallery" onclick="displayGallery('#barcelonetaGallery')"><div class="placesToVisitContainer">
+                            <img src="asset/barcelona/barceloneta/1.jpg" alt="place1">
+                            <span>Barcelona</span>
+                            <h3>Barceloneta</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quisquam delectus tempora?</p>
+                            <div class="ratePrice">
+                                <div class="rate">
+                                    <span class="fa fa-star checked" style="color:orange;" ></span>
+                                    <p>4.5</p>
+                                </div>
+                                    <p id="price">€28.50</p>
+                            </div>
+                            </div></a>
+                            <a href="#laRamblaGallery" onclick="displayGallery('#laRamblaGallery')"><div class="placesToVisitContainer">
+                            <img src="asset/barcelona/la rambla/1.jpg" alt="place1">
+                            <span>Barcelona</span>
+                            <h3>La Rambla</h3>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime vel soluta aliquam odio.</p>
+                            <div class="ratePrice">
+                                <div class="rate">
+                                    <span class="fa fa-star checked" style="color:orange;" ></span>
+                                    <p>4.5</p>
+                                </div>
+                                    <p id="price">€15.50</p>
+                            </div>
+                            </div></a>
+                            <a href="#picassoMuseumGallery" onclick="displayGallery('#picassoMuseumGallery')"><div class="placesToVisitContainer">
+                            <img src="asset/barcelona/picasso_museum/1.jpg" alt="place1">
+                            <span>Barcelona</span>
+                            <h3>Picasso Museum Barcelona</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas molestiae tempora aut amet dignissimos.</p>
+                            <div class="ratePrice">
+                                <div class="rate">
+                                    <span class="fa fa-star checked" style="color:orange;" ></span>
+                                    <p>4.5</p>
+                                </div>
+                                    <p id="price">€15.50</p>
+                            </div>
+                            </div></a>
+                            <a href="#botanicalGardenGallery" onclick="displayGallery('#botanicalGardenGallery')"><div class="placesToVisitContainer">
+                            <img src="asset/barcelona/botanicalgarden/1.jpg" alt="place1">
+                            <span>Barcelona</span>
+                            <h3>Botanical garden Barcelona</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas molestiae tempora aut amet dignissimos.</p>
+                            <div class="ratePrice">
+                                <div class="rate">
+                                    <span class="fa fa-star checked" style="color:orange;" ></span>
+                                    <p>4.5</p>
+                                </div>
+                                    <p id="price">€15.50</p>
+                            </div>
+                            </div></a>
+                    </div>
+                </div>
+                <div class="andorreGallery" id="andorraSection">
+                    <div class="countryPresentation">
+                        <img class="country" src="asset/andorra/pano.jpg" alt="andorre">
+                        <div class="countryText">
+                            <h1>Andorre</h1>
+                            <p>Small principality with Pyrenean ski resorts (Pal & Arinsal), duty free shops and hiking in summer.</p>
+                        </div>
+                    </div>
+                    <div class="countryGrid">
+                            <a href="#plaçadelPobleGallery" onclick="displayGallery('#plaçadelPobleGallery')"><div class="placesToVisitContainer">
+                                <img src="asset/andorra/Plaça del Poble.jpg" alt="place1">
+                                <span>Andorre</span>
+                                <h3>Plaça del Poble</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, ullam consectetur!</p>
+                                <div class="ratePrice">
+                                    <div class="rate">
+                                        <span class="fa fa-star checked" style="color:orange;" ></span>
+                                        <p>4.2</p>
+                                    </div>
+                                        from
+                                        <p id="price">€-</p>
+                                </div>
+                            </div></a>
+                            <a href="#CaldeaSpaComplexGallery" onclick="displayGallery('#CaldeaSpaComplexGallery')"><div class="placesToVisitContainer">
+                            <img src="asset/andorra/Caldea Spa Complex.jpg" alt="place1">
+                            <span>Andorre</span>
+                            <h3>Caldea Spa Complex</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, explicabo possimus nesciunt aspernatur laboriosam repudiandae?</p>
+                            <div class="ratePrice">
+                                <div class="rate">
+                                    <span class="fa fa-star checked" style="color:orange;" ></span>
+                                    <p>4.8</p>
+                                </div>
+                                    from
+                                    <p id="price">€18.99</p>
+                            </div>
+                            </div></a>
+                            <a href="#NaturlandiaGallery" onclick="displayGallery('#NaturlandiaGallery')"><div class="placesToVisitContainer">
+                                <img src="asset/andorra/Naturlandia.jpg" alt="place1">
+                                <span>Andorre</span>
+                                <h3>Naturlandia</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, explicabo possimus nesciunt aspernatur laboriosam repudiandae?</p>
+                                <div class="ratePrice">
+                                    <div class="rate">
+                                        <span class="fa fa-star checked" style="color:orange;" ></span>
+                                        <p>4.5</p>
+                                    </div>
+                                        from
+                                        <p id="price">€15.50</p>
+                                </div>
+                            </div></a>
+                            <a href="#MuseudelTabacGallery" onclick="displayGallery('#MuseudelTabacGallery')"><div class="placesToVisitContainer">
+                            <img src="asset/andorra/Museu del Tabac.jpg" alt="place1">
+                            <span>Andorre</span>
+                            <h3>Museu del Tabac</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, explicabo possimus nesciunt aspernatur laboriosam repudiandae?</p>
+                            <div class="ratePrice">
+                                <div class="rate">
+                                    <span class="fa fa-star checked" style="color:orange;" ></span>
+                                    <p>4.6</p>
+                                </div>
+                                    from
+                                    <p id="price">€12.50</p>
+                            </div>
+                            </div></a>
+                    </div>
+                </div>
+                <div class="parisGallery" id="parisSection">
+                    <div class="countryPresentation">
+                        <img class="country" src="asset/parisPano.jpg" alt="paris">
+                        <div class="countryText">
+                            <h1>Paris</h1>
+                            <p>French capital with the Eiffel Tower, the Louvre, Notre-Dame Cathedral, cafes & haute couture.</p>
+                        </div>
+                    </div>
+                    <div class="countryGrid">
+                            <a href="#eiffelGallery" onclick="displayGallery('#eiffelGallery')"><div class="placesToVisitContainer">
+                                    <img src="asset/paris/eiffel.jpg" alt="place1">
+                                    <span>Paris</span>
+                                    <h3>Tour Eiffel</h3>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, explicabo possimus nesciunt aspernatur laboriosam repudiandae?</p>
+                                    <div class="ratePrice">
+                                        <div class="rate">
+                                            <span class="fa fa-star checked" style="color:orange;" ></span>
+                                            <p>4.8</p>
+                                        </div>
+                                            from
+                                            <p id="price">€17.10</p>
+                                    </div>
+                            </div></a>
+                            <a href="#triomphGallery" onclick="displayGallery('#triomphGallery')"><div class="placesToVisitContainer">
+                                    <img src="asset/paris/arc de triomphe.jpg" alt="place1">
+                                    <span>Paris</span>
+                                    <h3>Arc de Triomphe</h3>
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt ducimus possimus adipisci assumenda aut hic.</p>
+                                    <div class="ratePrice">
+                                        <div class="rate">
+                                            <span class="fa fa-star checked" style="color:orange;" ></span>
+                                            <p>4.1</p>
+                                        </div>
+                                        from
+                                            <p id="price">€13.00</p>
+                                    </div>
+                            </div></a>
+                            <a href="#louvreGallery" onclick="displayGallery('#louvreGallery')"><div class="placesToVisitContainer">
+                                <img src="asset/paris/louvre.jpg" alt="place1">
+                                <span>Paris</span>
+                                <h3>Louvre museum</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quisquam delectus tempora?</p>
+                                <div class="ratePrice">
+                                    <div class="rate">
+                                        <span class="fa fa-star checked" style="color:orange;" ></span>
+                                        <p>4.5</p>
+                                    </div>
+                                        <p id="price">€17.00</p>
+                                </div>
+                            </div></a>
+                            <a href="#lafayetteGallery" onclick="displayGallery('#lafayetteGallery')"><div class="placesToVisitContainer">
+                                <img src="asset/paris/lafayette.jpg" alt="place1">
+                                <span>Paris</span>
+                                <h3>Galeries Lafayette</h3>
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime vel soluta aliquam odio.</p>
+                                <div class="ratePrice">
+                                    <div class="rate">
+                                        <span class="fa fa-star checked" style="color:orange;" ></span>
+                                        <p>4.6</p>
+                                    </div>
+                                        <p id="price">€ -</p>
+                                </div>
+                            </div></a>
+                            <a href="#notreDameGallery" onclick="displayGallery('#notreDameGallery')"><div class="placesToVisitContainer">
+                                <img src="asset/paris/notredame.jpg" alt="place1">
+                                <span>Paris</span>
+                                <h3>Cathédrale Notre-Dame de Paris</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas molestiae tempora aut amet dignissimos.</p>
+                                <div class="ratePrice">
+                                    <div class="rate">
+                                        <span class="fa fa-star checked" style="color:orange;" ></span>
+                                        <p>4.5</p>
+                                    </div>
+                                    from
+                                        <p id="price">€8.00</p>
+                                </div>
+                            </div></a>
+                            <a href="#versailleGallery" onclick="displayGallery('#versailleGallery')"><div class="placesToVisitContainer">
+                                <img src="asset/paris/versaille.jpg" alt="place1">
+                                <span>Paris</span>
+                                <h3>Versaille castle</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia eum repellendus distinctio sapiente libero?</p>
+                                <div class="ratePrice">
+                                    <div class="rate">
+                                        <span class="fa fa-star checked" style="color:orange;" ></span>
+                                        <p>4.8</p>
+                                    </div>
+                                    from
+                                        <p id="price">€10.00</p>
+                                </div>
+                            </div></a>
+                            <a href="#disneyGallery" onclick="displayGallery('#disneyGallery')"><div class="placesToVisitContainer">
+                                <img src="asset/paris/disneyland.jpg" alt="place1">
+                                <span>Paris</span>
+                                <h3>Disneyland Paris</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia eum repellendus distinctio sapiente libero?</p>
+                                <div class="ratePrice">
+                                    <div class="rate">
+                                        <span class="fa fa-star checked" style="color:orange;" ></span>
+                                        <p>4.8</p>
+                                    </div>
+                                    from
+                                        <p id="price">€52.00</p>
+                                </div>
+                            </div></a>
+                    </div>
+                </div>
+                <div class="amsterdamGallery" id="amsterdamSection">
+                    <div class="countryPresentation">
+                        <img class="country" src="asset/amsterdamPano.jpg" alt="Amsterdam">
+                        <div class="countryText">
+                            <h1>Amsterdam</h1>
+                            <p>Capital with many canals and cycle paths, and museums dedicated to Van Gogh, Rembrandt or Vermeer.</p>
+                        </div>
+                    </div>
+                    <div class="countryGrid">
+                            <a href="#RijksmuseumGallery" onclick="displayGallery('#RijksmuseumGallery')"><div class="placesToVisitContainer">
+                                    <img src="asset/Amsterdam/Rijksmuseum.jpg" alt="place1">
+                                    <span>Amsterdam</span>
+                                    <h3>Rijksmuseum Museum</h3>
+                                    <p>Lorem ipsum dolor sit amet si ipsam perferendis corrupti omnis sequi. Excepturi iste mollitia optio?</p>
+                                    <div class="ratePrice">
+                                        <div class="rate">
+                                            <span class="fa fa-star checked" style="color:orange;" ></span>
+                                            <p>4.3</p>
+                                        </div>
+                                            up to
+                                            <p id="price">€ 20.00</p>
+                                    </div>
+                            </div></a>
+                            <a href="#botGarAmsGallery" onclick="displayGallery('#botGarAmsGallery')"><div class="placesToVisitContainer">
+                                    <img src="asset/Amsterdam/jardins botaniques.jpg" alt="place1">
+                                    <span>Amsterdam</span>
+                                    <h3>botanical gardens Amsterdam</h3>
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt ducimus possimus adipisci assumenda aut hic.</p>
+                                    <div class="ratePrice">
+                                        <div class="rate">
+                                            <span class="fa fa-star checked" style="color:orange;" ></span>
+                                            <p>4.1</p>
+                                        </div>
+                                        from
+                                            <p id="price">€6.50</p>
+                                    </div>
+                            </div></a>
+                            <a href="#redlightGallery" onclick="displayGallery('#redlightGallery')"><div class="placesToVisitContainer">
+                                <img src="asset/Amsterdam/redlight secrets museum.jpg" alt="place1">
+                                <span>Amsterdam</span>
+                                <h3>Red Light Secrets Museum</h3>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam, saepe!</p>
+                                <div class="ratePrice">
+                                    <div class="rate">
+                                        <span class="fa fa-star checked" style="color:orange;" ></span>
+                                        <p>4.5</p>
+                                    </div>
+                                        From
+                                        <p id="price">€13.00</p>
+                                </div>
+                            </div></a>
+                            <a href="#gooyerMillGallery" onclick="displayGallery('#gooyerMillGallery')"><div class="placesToVisitContainer">
+                                <img src="asset/Amsterdam/GOOYER mill.jpg" alt="place1">
+                                <span>Amsterdam</span>
+                                <h3>GOOYER Mill</h3>
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime vel soluta aliquam odio.</p>
+                                <div class="ratePrice">
+                                    <div class="rate">
+                                        <span class="fa fa-star checked" style="color:orange;" ></span>
+                                        <p>4.6</p>
+                                    </div>
+                                        <p id="price">€ -</p>
+                                </div>
+                            </div></a>
+                            <a href="#heinekenGallery" onclick="displayGallery('#heinekenGallery')"><div class="placesToVisitContainer">
+                                <img src="asset/Amsterdam/heineken experience.jpg" alt="place1">
+                                <span>Amsterdam</span>
+                                <h3>HEINEKEN Experience</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas molestiae tempora aut amet dignissimos.</p>
+                                <div class="ratePrice">
+                                    <div class="rate">
+                                        <span class="fa fa-star checked" style="color:orange;" ></span>
+                                        <p>4.8</p>
+                                    </div>
+                                    from
+                                        <p id="price">€18.00</p>
+                                </div>
+                            </div></a>
+                            <a href="#BloemenmarktGallery" onclick="displayGallery('#BloemenmarktGallery')"><div class="placesToVisitContainer">
+                                <img src="asset/Amsterdam/Bloemenmarkt.jpg" alt="place1">
+                                <span>Amsterdam</span>
+                                <h3>Bloemenmarkt</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nam eveniet possimus.</p>
+                                <div class="ratePrice">
+                                    <div class="rate">
+                                        <span class="fa fa-star checked" style="color:orange;" ></span>
+                                        <p>4.3</p>
+                                    </div>
+                                        <p id="price">€ -</p>
+                                </div>
+                            </div></a>
+                            <a href="#vanGoghGallery" onclick="displayGallery('#vanGoghGallery')"><div class="placesToVisitContainer">
+                                <img src="asset/Amsterdam/vangogh.jpg" alt="place1">
+                                <span>Amsterdam</span>
+                                <h3>van Gogh Museum</h3>
+                                <p>Lorem ipsum dolor sit. Quia eum repellendus distinctio sapiente libero?</p>
+                                <div class="ratePrice">
+                                    <div class="rate">
+                                        <span class="fa fa-star checked" style="color:orange;" ></span>
+                                        <p>4.8</p>
+                                    </div>
+                                    from
+                                        <p id="price"><span>€</span>23.50</p>
+                            </div>
+                            </div></a>
+                    </div>
+                </div>
+                </div>
+                <div class="sliderContainer">
+                    <div class="sliderGallery">
+                        <button class="close"type="button">X</button>
+                        <i class="fa-solid fa-angles-left btn prevGal"></i>
+                        <i class="fa-solid fa-angles-right btn nextGal"></i>
+                        <div class="galleryContainer">
+                            <div class="display">
+                                <div class="innerContainer" id="parcGuellGallery">
+                                    <img src="asset/barcelona/parcguel/1 - Copie.jpg">
+                                    <img src="asset/barcelona/parcguel/2.jpg">
+                                    <img src="asset/barcelona/parcguel/3.jpg">
+                                    <img src="asset/barcelona/parcguel/4.jpg">
+                                    <img src="asset/barcelona/parcguel/5.jpg">
+                                    <img src="asset/barcelona/parcguel/6.jpg">
+                                    <img src="asset/barcelona/parcguel/7.jpg">
+                                    <img src="asset/barcelona/parcguel/8.jpg">
+                                </div>
+                                <div class="innerContainer" id="sagradaFamiliaGallery">
+                                    <img src="asset/barcelona/sagradafamilia/12.jpg">
+                                    <img src="asset/barcelona/sagradafamilia/2.jpg">
+                                    <img src="asset/barcelona/sagradafamilia/3.jpg">
+                                    <img src="asset/barcelona/sagradafamilia/4.jpg">
+                                    <img src="asset/barcelona/sagradafamilia/5.jpg">
+                                    <img src="asset/barcelona/sagradafamilia/6.jpg">
+                                </div>
+                                <div class="innerContainer" id="barcelonetaGallery">
+                                    <img src="asset/barcelona/barceloneta/12.jpg">
+                                    <img src="asset/barcelona/barceloneta/2.jpg">
+                                    <img src="asset/barcelona/barceloneta/3.jpg">
+                                    <img src="asset/barcelona/barceloneta/4.jpg">
+                                    <img src="asset/barcelona/barceloneta/5.jpg">
+                                    <img src="asset/barcelona/barceloneta/6.jpg">
+                                </div>
+                                <div class="innerContainer" id="laRamblaGallery">
+                                    <img src="asset/barcelona/la rambla/12.jpg">
+                                    <img src="asset/barcelona/la rambla/2.jpg">
+                                    <img src="asset/barcelona/la rambla/3.jpg">
+                                    <img src="asset/barcelona/la rambla/4.jpg">
+                                </div>
+                                <div class="innerContainer" id="picassoMuseumGallery">
+                                    <img src="asset/barcelona/picasso_museum/12.jpg">
+                                    <img src="asset/barcelona/picasso_museum/2.jpg">
+                                    <img src="asset/barcelona/picasso_museum/3.jpg">
+                                    <img src="asset/barcelona/picasso_museum/4.jpg">
+                                </div>
+                                <div class="innerContainer" id="botanicalGardenGallery">
+                                    <img src="asset/barcelona/botanicalgarden/12.jpg">
+                                    <img src="asset/barcelona/botanicalgarden/2.jpg">
+                                    <img src="asset/barcelona/botanicalgarden/3.jpg">
+                                    <img src="asset/barcelona/botanicalgarden/4.jpg">
+                                    <img src="asset/barcelona/botanicalgarden/5.jpg">
+                                </div>
+                                <div class="innerContainer" id="plaçadelPobleGallery">
+                                    <img src="asset/andorra/Plaça del Poble/1.jpg">
+                                    <img src="asset/andorra/Plaça del Poble/2.jpg">
+                                    <img src="asset/andorra/Plaça del Poble/3.jpg">
+                                    <img src="asset/andorra/Plaça del Poble/4.jpg">
+                                    <img src="asset/andorra/Plaça del Poble/5.jpg">
+                                </div>
+                                <div class="innerContainer" id="CaldeaSpaComplexGallery">
+                                    <img src="asset/andorra/Caldea Spa Complex/1.jpg">
+                                    <img src="asset/andorra/Caldea Spa Complex/2.jpg">
+                                    <img src="asset/andorra/Caldea Spa Complex/3.jpg">
+                                    <img src="asset/andorra/Caldea Spa Complex/4.jpg">
+                                    <img src="asset/andorra/Caldea Spa Complex/5.jpg">
+                                    
+                                </div>
+                                <div class="innerContainer" id="NaturlandiaGallery">
+                                    <img src="asset/andorra/Naturlandia/1.jpg">
+                                    <img src="asset/andorra/Naturlandia/2.jpg">
+                                    <img src="asset/andorra/Naturlandia/3.jpg">
+                                    <img src="asset/andorra/Naturlandia/4.jpg">
+                                    <img src="asset/andorra/Naturlandia/5.jpg">
+                                    <img src="asset/andorra/Naturlandia/6.jpg">
+                                </div>
+                                <div class="innerContainer" id="MuseudelTabacGallery">
+                                    <img src="asset/andorra/Museu del Tabac/1.jpg">
+                                    <img src="asset/andorra/Museu del Tabac/2.jpg">
+                                    <img src="asset/andorra/Museu del Tabac/3.jpg">
+                                    <img src="asset/andorra/Museu del Tabac/4.jpg">
+                                    <img src="asset/andorra/Museu del Tabac/5.jpg">
+                                    
+                                </div>
+                                <div class="innerContainer" id="eiffelGallery">
+                                    <img src="asset/paris/tour eiffel/1.jpg">
+                                    <img src="asset/paris/tour eiffel/2.jpg">
+                                    <img src="asset/paris/tour eiffel/3.jpg">
+                                </div>
+                                <div class="innerContainer" id="triomphGallery">
+                                    <img src="asset/paris/triomph/1.jpg">
+                                    <img src="asset/paris/triomph/2.jpg">
+                                    <img src="asset/paris/triomph/3.jpg">
+                                    <img src="asset/paris/triomph/4.jpg">
+                                </div>
+                                <div class="innerContainer" id="louvreGallery">
+                                    <img src="asset/paris/louvre/1.jpg">
+                                    <img src="asset/paris/louvre/2.jpg">
+                                    <img src="asset/paris/louvre/3.jpg">
+                                    <img src="asset/paris/louvre/4.jpg">
+                                    <img src="asset/paris/louvre/5.jpg">
+                                    <img src="asset/paris/louvre/6.jpg">
+                                </div>
+                                <div class="innerContainer" id="lafayetteGallery">
+                                    <img src="asset/paris/lafayette/2.jpg">
+                                    <img src="asset/paris/lafayette/1.jpg">
+                                    <img src="asset/paris/lafayette/3.jpg">
+                                    <img src="asset/paris/lafayette/4.jpg">
+                                </div>
+                                <div class="innerContainer" id="notreDameGallery">
+                                    <img src="asset/paris/notreDame/1.jpg">
+                                    <img src="asset/paris/notreDame/2.jpg">
+                                    <img src="asset/paris/notreDame/3.jpg">
+                                    <img src="asset/paris/notreDame/4.jpg">
+                                    <img src="asset/paris/notreDame/5.jpg">
+                                </div>
+                                <div class="innerContainer" id="versailleGallery">
+                                    <img src="asset/paris/versaille/1.jpg">
+                                    <img src="asset/paris/versaille/2.jpg">
+                                    <img src="asset/paris/versaille/3.jpg">
+                                    <img src="asset/paris/versaille/4.jpg">
+                                    <img src="asset/paris/versaille/5.jpg">
+                                    <img src="asset/paris/versaille/6.jpg">
+                                    <img src="asset/paris/versaille/7.jpg">
+                                    
+                                </div>
+                                <div class="innerContainer" id="disneyGallery">
+                                    <img src="asset/paris/disneyLand/1.jpg">
+                                    <img src="asset/paris/disneyLand/2.jpg">
+                                    <img src="asset/paris/disneyLand/3.jpg">
+                                    <img src="asset/paris/disneyLand/4.jpg">
+                                    <img src="asset/paris/disneyLand/5.jpg">
+                                    <img src="asset/paris/disneyLand/6.jpg">
+                                </div>
+                                <div class="innerContainer" id="RijksmuseumGallery">
+                                    <img src="asset/Amsterdam/Rijksmuseum/1.jpg">
+                                    <img src="asset/Amsterdam/Rijksmuseum/2.jpg">
+                                    <img src="asset/Amsterdam/Rijksmuseum/3.jpg">
+                                    <img src="asset/Amsterdam/Rijksmuseum/4.jpg">
+                                    <img src="asset/Amsterdam/Rijksmuseum/5.jpg">
+                                    <img src="asset/Amsterdam/Rijksmuseum/6.jpg">
+                                    <img src="asset/Amsterdam/Rijksmuseum/7.jpg">
+                                    
+                                </div>
+                                <div class="innerContainer" id="botGarAmsGallery">
+                                    <img src="asset/Amsterdam/botanicalGarden/1.jpg">
+                                    <img src="asset/Amsterdam/botanicalGarden/2.jpg">
+                                    <img src="asset/Amsterdam/botanicalGarden/3.jpg">
+                                    <img src="asset/Amsterdam/botanicalGarden/4.jpg">
+                                    <img src="asset/Amsterdam/botanicalGarden/5.jpg">
+                                    <img src="asset/Amsterdam/botanicalGarden/6.jpg">
+                                </div>
+                                <div class="innerContainer" id="redlightGallery">
+                                    <img src="asset/Amsterdam/redlight/1.jpg">
+                                    <img src="asset/Amsterdam/redlight/2.jpg">
+                                    <img src="asset/Amsterdam/redlight/3.jpg">
+                                </div>
+                                <div class="innerContainer" id="gooyerMillGallery">
+                                    <img src="asset/Amsterdam/gooyermill/1.jpg">
+                                    <img src="asset/Amsterdam/gooyermill/2.jpg">
+                                    <img src="asset/Amsterdam/gooyermill/3.jpg">
+                                </div>
+                                <div class="innerContainer" id="heinekenGallery">
+                                    <img src="asset/Amsterdam/heineken/4.jpg">
+                                    <img src="asset/Amsterdam/heineken/1.jpg">
+                                    <img src="asset/Amsterdam/heineken/2.jpg">
+                                    <img src="asset/Amsterdam/heineken/3.jpg">
+                                </div>
+                                <div class="innerContainer" id="BloemenmarktGallery">
+                                    <img src="asset/Amsterdam/Bloemenmarkt/1.jpg">
+                                    <img src="asset/Amsterdam/Bloemenmarkt/2.jpg">
+                                    <img src="asset/Amsterdam/Bloemenmarkt/3.jpg">
+                                    <img src="asset/Amsterdam/Bloemenmarkt/4.jpg">
+                                    <img src="asset/Amsterdam/Bloemenmarkt/5.jpg">
+                                </div>
+                                <div class="innerContainer" id="vanGoghGallery">
+                                    <img src="asset/Amsterdam/vanGogh/1.jpg">
+                                    <img src="asset/Amsterdam/vanGogh/2.jpg">
+                                    <img src="asset/Amsterdam/vanGogh/3.jpg">
+                                    <img src="asset/Amsterdam/vanGogh/4.jpg">
+                                    <img src="asset/Amsterdam/vanGogh/5.jpg">
+                                    <img src="asset/Amsterdam/vanGogh/6.jpg">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div class="contactSection" id="contactUs">
+            <h1>Contact Us</h1>
+            <div class="contactContainer">
+                <div class="inputContainer">
+                    <input type="text" name="name" placeholder="please enter your Name"/>
+                    <input type="text" name="object" placeholder="Object"/>
+                    <input id="contactUsMail" type="text" name="Email" placeholder="please enter your Email"/>
+                    <input type="text" name="number" placeholder="please enter your phone number"/>
+                    <input type="text" name="date" placeholder="date dd/mm/yyyy"/>
+                    <input type="text" name="details" placeholder="other details"/>
+                    </div>
+                    <textarea id="message" name="message" cols="30" rows="5">
+                        please type your message (500 character maximum)
+                    </textarea>
+                    <button type="submit">send</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footerContainer">
+            <a href="index.HTML"><h1>Travels<span>GO</span></h1></a>
+        <p>© 2022 TravelsGO</p>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
